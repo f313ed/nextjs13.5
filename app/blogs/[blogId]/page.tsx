@@ -46,7 +46,9 @@ export default async function BlogDetailPage({ params }: PageProps) {
       </p>
       <p>
         <strong className="mr-3">Created at:</strong>
-        {blog && format(new Date(blog.created_at), 'yyyy-MM-dd HH:mm:ss')}
+        {blog &&
+          blog.created_at &&
+          format(new Date(blog.created_at), 'yyyy-MM-dd HH:mm:ss')}
       </p>
       <Link href={`/blogs`}>
         <ArrowUturnLeftIcon className="mt-3 h-6 w-6 cursor-pointer text-blue-500" />
